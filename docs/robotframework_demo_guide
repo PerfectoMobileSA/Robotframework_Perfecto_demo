@@ -1,0 +1,25 @@
+1. Install python in a clean environment 
+2. Open cmd, type: pip install PerfectoLibrary or PerfectoLibrary_py37 for python3
+   or type: python -m pip install PerfectoLibrary (same meaning, but some company PCs prevent pip from being running separately)
+
+   PerfectoLibrary and all necessary dependancies(including robotframework) shall be installed successfully
+
+3. Open the demo robot files, replace <your_username> <your_password> with your cloud credentials, or replace <your_perfecto_security_token> with your own perfecto security token
+
+4. in the cmd, go to the directory where you place the robot scripts:
+   then type:
+   python -m robot testPerfectoBrowserWeb-Demo.robot testPerfectoDevices-Demo.robot
+   
+
+5. Open device dashboard, you shall see the iPhone being opened up and doing following:
+   launch app notes
+   create a new note
+   rotate to landscape
+   wait for a few seconds
+   rotate to portrait
+   wait for a few seconds
+   go to home screen
+   swipe to the right screen
+
+ NOTE: If need enable proxy, use "Enable Proxy" keyword or "Set Environment Variable" and type in proper proxy info
+ For helps regarding using pip, please refer to https://pip.pypa.io/en/stable/
