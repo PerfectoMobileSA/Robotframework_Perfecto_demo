@@ -1,7 +1,7 @@
 *** Settings ***
 Library           AppiumLibrary    10
 Library           PerfectoLibrary     RobotframeworkPerfectoBrowserDemoProject        v1.0         RobotframeworkPerfectoBrowserDemoJob       1
-
+Library           OperatingSystem
 *** Variables ***
 ${perfecturl}     https://<your_cloud_name>.perfectomobile.com/nexperience/perfectomobile/wd/hub/fast
 ${token}          <your_perfecto_security_token>
@@ -24,6 +24,7 @@ Demo test on iphone
 *** keywords ***
 open test device and launch mobilenotes
     [arguments]     ${devicemodel}
+    Set Environment Variable keyword             https_proxy              http://<user>:<pass>@proxyserver.com:8080
     run keyword if  '${devicemodel}'=='iPhone'     open application    ${perfecturl}   securityToken=${token}    deviceName=${deviceid_iphone}      noReset=True   bundleId=${bundleId}
     run keyword if  '${devicemodel}'=='Android'     open application    ${perfecturl}   securityToken=${token}    deviceName=${deviceid_android}      noReset=True   browserName=mobileOS
 
