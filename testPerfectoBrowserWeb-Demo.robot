@@ -20,7 +20,7 @@ Open Perfecto site
 *** keywords ***
 open test bb
     [Arguments]  ${b}
-    Set Environment Variable keyword             https_proxy              http://<user>:<pass>@proxyserver.com:8080
+    Set Environment Variable             https_proxy              http://<user>:<pass>@proxyserver.com:8080
     ${capbilities}=     Create Dictionary        platformName=Windows      platformVersion=10      location=US East     resolution=1280x1024     browserName=Chrome       browserVersion=83      securityToken=${perfecto_token}
     run keyword if      '${b}'=='Chrome'        open browser    https://perfecto.io    chrome    perfecto-run    ${perfecto_hub_url}       ${capbilities}
 
