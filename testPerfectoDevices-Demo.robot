@@ -24,8 +24,8 @@ Demo test on iphone
 *** keywords ***
 open test device and launch mobilenotes
     [arguments]     ${devicemodel}
-    run keyword if  '${devicemodel}'=='iPhone'     open application    ${perfecturl}   securityToken=${token}    deviceName=${deviceid_iphone}      noReset=True   bundleId=${bundleId}
-    run keyword if  '${devicemodel}'=='Android'     open application    ${perfecturl}   securityToken=${token}    deviceName=${deviceid_android}      noReset=True   browserName=mobileOS
+    run keyword if  '${devicemodel}'=='iPhone'     open application    ${perfecturl}   securityToken=${token}    deviceName=${deviceid_iphone}      noReset=${True}   bundleId=${bundleId}
+    run keyword if  '${devicemodel}'=='Android'     open application    ${perfecturl}   securityToken=${token}    deviceName=${deviceid_android}      noReset=${True}   browserName=mobileOS
 
 
 create a note
