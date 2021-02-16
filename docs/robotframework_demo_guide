@@ -3,6 +3,26 @@
    or type: python -m pip install PerfectoLibrary (same meaning, but some company PCs prevent pip from being running separately)
 
    PerfectoLibrary and all necessary dependancies(including robotframework) shall be installed successfully
+    Please make sure that you are having same pip list as below, try not using your PC python env, but use a vitual env and install cleaning pip pkgs from the scratch:
+    Package                         Version
+    ------------------------------- -------
+    Appium-Python-Client            1.0.2
+    decorator                       4.4.2
+    docutils                        0.16
+    kitchen                         1.2.6
+    perfecto-py37                   0.1.0
+    perfectolibrary-py37            0.5.1
+    pip                             21.0.1
+    robotframework                  3.2.2
+    robotframework-appiumlibrary    1.5.0.7
+    robotframework-pythonlibcore    2.2.1
+    robotframework-selenium2library 3.0.0
+    robotframework-seleniumlibrary  4.5.0
+    selenium                        3.141.0
+    Selenium2LibraryExtension       1.1.0
+    setuptools                      53.0.0
+    six                             1.15.0
+    urllib3                         1.26.3
 
 3. Open the demo robot files, replace <your_username> <your_password> with your cloud credentials, or replace <your_perfecto_security_token> with your own perfecto security token
 
