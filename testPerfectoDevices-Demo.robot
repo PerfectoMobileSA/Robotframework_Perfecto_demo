@@ -3,7 +3,7 @@ Library           AppiumLibrary    10
 Library           PerfectoLibrary     RobotframeworkPerfectoBrowserDemoProject        v1.0         RobotframeworkPerfectoBrowserDemoJob       1
 
 *** Variables ***
-${perfecturl}     https://<your_cloud_name>.perfectomobile.com/nexperience/perfectomobile/wd/hub/fast
+${perfecturl}     https://<your_cloud_name>.perfectomobile.com/nexperience/perfectomobile/wd/hub
 ${token}          <your_perfecto_security_token>
 ${bundleId}       com.apple.mobilenotes
 ${deviceid_iphone}   <your_device_id>
