@@ -13,6 +13,7 @@ Demo test on iphone
     [Tags]    Perfeco  Device   iPhone
     [Teardown]   Close All Applications
     open test device and launch mobilenotes      iPhone
+    sleep  9
     create a note
     rotate to lanscape
     sleep  9
@@ -24,13 +25,13 @@ Demo test on iphone
 *** keywords ***
 open test device and launch mobilenotes
     [arguments]     ${devicemodel}
-    run keyword if  '${devicemodel}'=='iPhone'     open application    ${perfecturl}   securityToken=${token}    deviceName=${deviceid_iphone}      noReset=${True}   bundleId=${bundleId}
+    run keyword if  '${devicemodel}'=='iPhone'     open application    ${perfecturl}   securityToken=${token}    deviceName=${deviceid_iphone}      noReset=${True}   bundleId=${bundleId}        takesScreenshot=${True}              screenshotOnError=${False}
     run keyword if  '${devicemodel}'=='Android'     open application    ${perfecturl}   securityToken=${token}    deviceName=${deviceid_android}      noReset=${True}   browserName=mobileOS
 
 
 create a note
     click element  //*[@label="New note"]
-    input text     //*[@label="note"]     test1234
+    input text     //*[@label="Note"]     test1234
     click element  //*[@label="Done"]
 
 
