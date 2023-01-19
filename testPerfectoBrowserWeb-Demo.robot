@@ -4,12 +4,12 @@ Library           PerfectoLibrary     RobotframeworkPerfectoBrowserDemoProject  
 
 *** Variables ***
 ${browser}     Chrome
-${perfecto_hub_url}     https://<your_cloud_name>.perfectomobile.com/nexperience/perfectomobile/wd/hub/fast
+${perfecto_hub_url}     https://<your_cloud_name>.perfectomobile.com/nexperience/perfectomobile/wd/hub
 ${perfecto_token}       <your_perfecto_security_token>
 
 *** Test Cases ***
 Open Perfecto site
-    [Tags]    Perfeco  Browser   Chrome    v83
+    [Tags]    Perfeco  Browser   Chrome    Latest
     [teardown]      Close all browsers
     open test bb      ${browser}
     Open Getting Started page
@@ -20,7 +20,7 @@ Open Perfecto site
 *** keywords ***
 open test bb
     [Arguments]  ${b}
-    ${capbilities}=     Create Dictionary        platformName=Windows      platformVersion=10      location=US East     resolution=1280x1024     browserName=Chrome       browserVersion=83      securityToken=${perfecto_token}
+    ${capbilities}=     Create Dictionary        platformName=Windows      platformVersion=10      perfecto:location=US East     perfecto:resolution=1280x1024     perfecto:browserName=Chrome       perfecto:browserVersion=latest      perfecto:securityToken=${perfecto_token}
     run keyword if      '${b}'=='Chrome'        open browser    https://perfecto.io    chrome    perfecto-run    ${perfecto_hub_url}       ${capbilities}
 
 Open Getting Started page

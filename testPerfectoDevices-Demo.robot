@@ -3,10 +3,10 @@ Library           AppiumLibrary    10
 Library           PerfectoLibrary     RobotframeworkPerfectoBrowserDemoProject        v1.0         RobotframeworkPerfectoBrowserDemoJob       1
 
 *** Variables ***
-${perfecturl}     https://<your_cloud_name>.perfectomobile.com/nexperience/perfectomobile/wd/hub
-${token}          <your_perfecto_security_token>
+${perfecto_hub_url}     https://<your_cloud_name>.perfectomobile.com/nexperience/perfectomobile/wd/hub
+${perfecto_token}       <your_perfecto_security_token>
 ${bundleId}       com.apple.mobilenotes
-${deviceid_iphone}   <your_device_id>
+${deviceid_iphone}   <Your Device ID>
 
 *** Test Cases ***
 Demo test on iphone
@@ -25,14 +25,14 @@ Demo test on iphone
 *** keywords ***
 open test device and launch mobilenotes
     [arguments]     ${devicemodel}
-    run keyword if  '${devicemodel}'=='iPhone'     open application    ${perfecturl}   securityToken=${token}    deviceName=${deviceid_iphone}      noReset=${True}   bundleId=${bundleId}        takesScreenshot=${True}              screenshotOnError=${False}
-    run keyword if  '${devicemodel}'=='Android'     open application    ${perfecturl}   securityToken=${token}    deviceName=${deviceid_android}      noReset=${True}   browserName=mobileOS
+    run keyword if  '${devicemodel}'=='iPhone'     open application    ${perfecto_hub_url}   perfecto:securityToken=${perfecto_token}    perfecto:deviceName=${deviceid_iphone}      perfecto:noReset=${True}   perfecto:bundleId=${bundleId}        perfecto:takesScreenshot=${True}              perfecto:screenshotOnError=${False}
+    run keyword if  '${devicemodel}'=='Android'     open application    ${perfecto_hub_url}   perfecto:securityToken=${perfecto_token}    perfecto:deviceName=${deviceid_android}      perfecto:noReset=${True}   perfecto:browserName=mobileOS
 
 
 create a note
-    click element  //*[@label="New note"]
-    input text     //*[@label="Note"]     test1234
-    click element  //*[@label="Done"]
+    Click Element       xpath=//*[@label="New note"]
+    input text         xpath=//*[@label="Note"]     test1234
+    click element      xpath=//*[@label="Done"]
 
 
 goto home screen
