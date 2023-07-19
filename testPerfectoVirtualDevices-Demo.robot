@@ -4,8 +4,7 @@ Library           PerfectoLibrary     RobotframeworkPerfectoBrowserDemoProject  
 
 *** Variables ***
 ${perfecto_hub_url}     https://<your_cloud_name>.perfectomobile.com/nexperience/perfectomobile/wd/hub
-${perfecto_token}       <your_perfecto_security_token>
-
+${perfecto_token}       <your_sec_token>
 ${bundleId}       com.apple.reminders
 
 *** Test Cases ***

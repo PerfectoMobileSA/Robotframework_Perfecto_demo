@@ -4,9 +4,9 @@ Library           PerfectoLibrary     RobotframeworkPerfectoBrowserDemoProject  
 
 *** Variables ***
 ${perfecto_hub_url}     https://<your_cloud_name>.perfectomobile.com/nexperience/perfectomobile/wd/hub
-${perfecto_token}       <your_perfecto_security_token>
+${perfecto_token}       <your_sec_token>
 ${bundleId}       com.apple.mobilenotes
-${deviceid_iphone}   <Your Device ID>
+${deviceid_iphone}   <your_device_id>
 
 *** Test Cases ***
 Demo test on iphone
