@@ -31,6 +31,6 @@ Open Getting Started page
 Fill the firstname and lastname fields
     input text     xpath=//input[@id="FirstName"]    firstname
     input text     xpath=//input[@id="LastName"]    lastname
-    Textfield Value Should Be      xpath=//input[@id="FirstName"]    firstname
-    Textfield Value Should Be      xpath=//input[@id="LastName"]    lastname
+    Element Should Contain Text     xpath=//input[@id="FirstName"]    firstname
+    Element Should Contain Text     xpath=//input[@id="LastName"]    lastname
 
